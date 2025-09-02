@@ -1,0 +1,1 @@
+public record ResultDto(string TopPersona, Dictionary<string,int> Scores);

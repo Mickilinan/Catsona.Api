@@ -1,0 +1,1 @@
+public record AnswerDto(int QuestionId, int OptionIndex);
