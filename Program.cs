@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddDbContext<QuizDbContext>(options =>
-options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<QuizService>();
 
@@ -33,7 +33,7 @@ app.UseCors("AllowReactApp");
 
 // API endpoints
 app.MapGet("/", () => Results.Text("KattKompass API är igång!"));
-app.MapGet("/api/quiz", (QuizService quizService) => Results.Json(quizService.GetQuiz()));
+// app.MapGet("/api/quiz", (QuizService quizService) => Results.Json(quizService.GetQuiz()));
 
 app.Run();
 

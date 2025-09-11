@@ -3,5 +3,5 @@ public record CatPersona(
     string Name,
     string Description,
     string[] TypicalBehaviours,
-    string ExampleQoute
+    string ExampleQuote
 );
