@@ -1,6 +1,6 @@
 # KattKompass API
 
-Minimal ASP.NET Core API för quizet KattKompass.
+Minimal ASP.NET Core API för quizet Catsona.
 
 ## Köra lokalt
 ```bash

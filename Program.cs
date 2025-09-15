@@ -32,8 +32,10 @@ app.UseCors("AllowReactApp");
 
 
 // API endpoints
-app.MapGet("/", () => Results.Text("KattKompass API är igång!"));
-// app.MapGet("/api/quiz", (QuizService quizService) => Results.Json(quizService.GetQuiz()));
+app.MapGet("/", () => Results.Text("Catsona API är igång!"));
+app.MapGet("/api/quiz", (QuizService quizService) => Results.Json(quizService.GetQuiz()));
+app.MapPost("/api/quiz/submit", (SubmissionDto submission, QuizService quizService) => 
+    Results.Json(quizService.CalculateResult(submission)));
 
 app.Run();
 
