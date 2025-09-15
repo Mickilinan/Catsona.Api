@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace KattKompass.Api.Migrations
+namespace Catsona.Api.Migrations
 {
     /// <inheritdoc />
     public partial class createTables : Migration

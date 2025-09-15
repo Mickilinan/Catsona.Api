@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/KattKompass.Api.sln",
+                "${workspaceFolder}/Catsona.Api.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/KattKompass.Api.sln",
+                "${workspaceFolder}/Catsona.Api.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/KattKompass.Api.sln"
+                "${workspaceFolder}/Catsona.Api.sln"
             ],
             "problemMatcher": "$msCompile"
         }

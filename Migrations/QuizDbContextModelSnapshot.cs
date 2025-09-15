@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace KattKompass.Api.Migrations
+namespace Catsona.Api.Migrations
 {
     [DbContext(typeof(QuizDbContext))]
     partial class QuizDbContextModelSnapshot : ModelSnapshot

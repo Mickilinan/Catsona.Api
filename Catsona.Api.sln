@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KattKompass.Api", "KattKompass.Api.csproj", "{292ADAF5-BD48-6C9C-4616-6F2A14810578}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catsona.Api", "Catsona.Api.csproj", "{292ADAF5-BD48-6C9C-4616-6F2A14810578}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

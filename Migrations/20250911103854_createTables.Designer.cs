@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace KattKompass.Api.Migrations
+namespace Catsona.Api.Migrations
 {
     [DbContext(typeof(QuizDbContext))]
     [Migration("20250911103854_createTables")]
