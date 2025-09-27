@@ -8,7 +8,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")
+        policy.WithOrigins("http://localhost:5173")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
@@ -36,6 +36,7 @@ app.MapGet("/", () => Results.Text("Catsona API är igång!"));
 app.MapGet("/api/quiz", (QuizService quizService) => Results.Json(quizService.GetQuiz()));
 app.MapPost("/api/quiz/submit", (SubmissionDto submission, QuizService quizService) => 
     Results.Json(quizService.CalculateResult(submission)));
+app.MapGet("/api/catpersonas", (QuizService quizService) => Results.Json(quizService.GetCatPersonas()));
 
 app.Run();
 
