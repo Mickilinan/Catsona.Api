@@ -1,180 +1,196 @@
+
 public class QuizService
 {
-    public QuizQuestion[] GetQuiz()
+  public QuizQuestion[] GetQuiz()
+{
+    return new[]
     {
-        return new QuizQuestion[]
-        {
-            new QuizQuestion(
+        new QuizQuestion(
             1,
-            "Hur hanterar du en ledig söndag utan planer?",
-            new string[]{"Jag gör inget. Om möjligt, ännu mindre.", "Jag glor ut genom fösntret och låtsas tänka på livet.", "Jag organiserar om köksskåpen för fjärde gången. Det är tryggt.",
-            "Planer?! Jag har redan cyklat, målat, sprungit och bakat bröd!", "Det är inte söndag förrän 02:00, då kickar jag igång."}
+            "Your morning alarm goes off. What happens next?",
+            new[]
+            {
+                "Snooze. Then negotiate a second snooze.",
+                "Stare at the ceiling and reflect on time itself.",
+                "Get up on schedule, make the bed with precision.",
+                "I’m already up — stretches done, coffee brewing.",
+                "“Morning” is a social construct. I’m going to bed now."
+            }
         ),
         new QuizQuestion(
             2,
-            "Du får en inbjudan till en spontan fest ikväll. Vad gör du?",
-            new string[]{"Ignorerar den. Har en relation med min filt", "Funderar på hur det känns att gå, men går inte. ", "Nej tack. Jag har ett schema och ett kvällste att respektera. ",
-                "JA! Klart jag kommer! Kan jag ta med ett brädspel? ", "Kommer sent. Dansar konstigt. Går inte hem. "}
+            "You have a free hour with nothing planned. What do you do?",
+            new[]
+            {
+                "Burrito myself in a blanket and do absolutely nothing.",
+                "Sit by a window and watch the world go by.",
+                "Sort a drawer, tidy a shelf, restore order to the realm.",
+                "Try three little activities in ten minutes, start a mini adventure.",
+                "Save the hour for later—my day starts after dark."
+            }
         ),
         new QuizQuestion(
             3,
-            "Vad beskriver bäst din relation till teknik?",
-            new string[]{"Jag använder fjärrkontrollen som armstöd. ", "Jag kollar YouTube-tutorials om grejer jag aldrig kommer göra. ",
-                "Jag har lösenordshanterare, backuper och etiketter på alla kablar. ", "Jag har tre smarta högtalare och de bråkar med varandra. ", "Kod, AI och mörker. Allt funkar bättre efter midnatt. "}
+            "A friend suggests a spontaneous outing right now.",
+            new[]
+            {
+                "Thank you, but I’m in a committed relationship with my couch.",
+                "I’ll think about it… and probably keep thinking.",
+                "Can we schedule it for Thursday at 18:30?",
+                "YES. Shoes on. Where are we going?",
+                "See you tonight—much later tonight."
+            }
         ),
         new QuizQuestion(
             4,
-            "Vad gör du när du blir riktigt inspirerad?",
-            new string[]{"Lägger mig ner tills känslan går över. ", "Skriver ett långt dokument jag aldrig öppnar igen. ", "Skapar en mappstruktur med färgkodning. ",
-                "Startar ett projekt. Bygger en hemsida. Glömmer äta. ", "Skriver 14 idéer i Notion kl. 03:27. Alla börjar med “Tänk om…” "}
+            "You’re suddenly feeling inspired.",
+            new[]
+            {
+                "Lie down until the feeling passes.",
+                "Write a few thoughtful lines in a notebook.",
+                "Make a neat plan with steps and boxes to tick.",
+                "Start immediately; I’ll figure it out while doing.",
+                "Note the idea and revisit it at 02:00 with dramatic flair."
+            }
         ),
         new QuizQuestion(
             5,
-            "Hur ser du på din sömn?",
-            new string[]{"Det är min största passion och hobby. ", "Jag sover när hjärnan tillåter. Vilket den inte gör. ", "Jag har sovtid, sängtäcke, öronproppar och backup-kudde. ",
-                "Sömn? Jag har inte tid. Jag har idéer. ", "Min dygnsrytm är ett konstprojekt. "}
+            "It’s time to relax after a long day. Your ideal vibe?",
+            new[]
+            {
+                "Soft blanket, soft snacks, soft silence.",
+                "Quiet corner, slow thoughts, maybe rainfall in the background.",
+                "A familiar routine: tea, tidy, favorite rerun.",
+                "Something lively—games, friends, movement, laughter.",
+                "A moonlit walk, late music, night-owl magic."
+            }
         )
-        };
+    };
+}
 
 
-    }
 
     public CatPersona[] GetCatPersonas()
     {
-        return new CatPersona[]
-            {
-            new CatPersona(
+        return new[]
+        {
+        new CatPersona(
             1,
             "The Purrplex",
-            "En soffliggande mystiker som tycks vara i ständig existentiell vila. Misstas ofta för en kudde. Går bara upp om det brinner (kanske). Chillar på avancerad nivå.",
-            new string[] { "Har GPS-positionerat varje mjuk yta i hemmet.", "Känner exakt skillnad på “mysljummet” och “perfekt temperatur",
-                "Lägger sig på fjärrkontrollen men vägrar flytta." },
-            "Jag är inte lat. Jag är i viloläge med stil."
-            ),
-            new CatPersona(
+            "A couch-dwelling mystic in permanent existential idle. Often mistaken for a pillow. Gets up only if there's a fire (maybe). Chilling at an advanced level.",
+            new[]
+            {
+                "Has GPS-marked every soft surface in the home.",
+                "Detects the exact difference between “cozy-warm” and “perfect temperature”.",
+                "Lies on the remote and refuses to move."
+            },
+            "I'm not lazy. I'm in stylish standby."
+        ),
+        new CatPersona(
             2,
             "Paws N' Reflect",
-            "Mästerlig betraktare. Sitter vid fönstret och dömer världen i tystnad. Rör sig inte i onödan – men vet exakt vad som händer på parkeringen. Har tankar. Djupa sådana.",
-            new string[] { "Stirrar på ingenting i 40 minuter – sedan blinkar långsamt.", "Ser ut att tänka på universum, planerar förmodligen ett hopp på diskbänken.",
-                "Reagerar bara på saker som flyger, glänser eller rör sig mystiskt." },
-            "Jag ser allt. Jag gör inget."
-            ),
-              new CatPersona(
+            "A master observer. Sits by the window and judges the world in silence. Moves only when necessary — yet knows exactly what's happening in the parking lot. Has thoughts. Deep ones.",
+            new[]
+            {
+                "Stares at nothing for 40 minutes — then slow-blinks.",
+                "Looks like they're pondering the universe; probably planning a jump onto the counter.",
+                "Only reacts to things that fly, sparkle, or move mysteriously."
+            },
+            "I see everything. I do nothing."
+        ),
+        new CatPersona(
             3,
             "Boximus Prime",
-            "En skuggälskande trygghetssamlare som lever efter devisen: ”Inga överraskningar är bra överraskningar.” Har sin plats, sin filt, sin rytm – och gärna också sin vägg bakom ryggen. Minimalist i det yttre, maximalist i sin zon.",
-            new string[] { "Har en specifik plats i soffan – och den är helig.", "Går till samma ICA, samma kassa, varje gång.",
-                "Tittar på The Office för fjärde gången för att den vet vad som händer." },
-            "Jag gillar när livet känns som en mjuk låda. Med lock."
-            ),
-              new CatPersona(
+            "A shadow-loving collector of safety who lives by: “No surprises are good surprises.” Has a spot, a blanket, a rhythm — and preferably a wall behind their back. Minimalist on the outside, maximalist in their zone.",
+            new[]
+            {
+                "Has a specific spot on the couch — and it is sacred.",
+                "Goes to the same grocery store, same checkout, every time.",
+                "Watches The Office for the fourth time because they know what happens."
+            },
+            "I like life when it feels like a soft box. With a lid."
+        ),
+        new CatPersona(
             4,
             "The Zoomolog",
-            "Har ett konstant överskottslager av energi. Ser en laserpunkt? Zoom. En skugga i ögonvrån? ZOOM. Fungerar som människa ungefär som en katt med jetpack – driven, spontan, men hopplös på att sitta still.",
-            new string[] { "Går från “ligger ner” till “springer till köket” på 0.2 sekunder.", "•	Skriver meddelanden i CAPSLOCK utan att märka det.",
-                "Börjar fem projekt på en gång – hinner klart… kanske ett?" },
-            "Vad sa du? Nej men jag lyssnade. Eller alltså... jag trodde jag gjorde det. Så många bollar, så lite tid."
-
-            ),
-              new CatPersona(
+            "Runs on surplus energy. See a laser dot? Zoom. A shadow in the corner? ZOOM. Human equivalent of a cat with a jetpack — driven, spontaneous, hopeless at sitting still.",
+            new[]
+            {
+                "Goes from lying down to sprinting to the kitchen in 0.2 seconds.",
+                "Types messages in CAPS LOCK without noticing.",
+                "Starts five projects at once — maybe finishes one?"
+            },
+            "What did you say? No, I was listening. Or… I thought I was. So many balls, so little time."
+        ),
+        new CatPersona(
             5,
             "The Midnight Whisker",
-            "Blommar ut vid midnatt. När andra stänger ögonen öppnar Natt-Nisse Figma, YouTube, och sitt sjätte sinne. En nattlig kattvarelse med kreativ eld, kaosenergi och obegriplig dygnsrytm.",
-            new string[] { "Dricker kaffe kl. 22 och tycker det är “lugnt”.", "Har byggt om hela sin portfolio mellan 01–04 – tre gånger.",
-                "Svarar på mejl 03:37 och avslutar med “godmorgon”." },
-            "Sömn är för svaga – eller väldigt strukturerade – själar."
-            ),
-        };
+            "Blooms at midnight. When others close their eyes, Midnight opens Figma, YouTube, and a sixth sense. A nocturnal cat-being with creative fire, chaos energy, and an unreadable sleep cycle.",
+            new[]
+            {
+                "Drinks coffee at 22:00 and calls it “fine”.",
+                "Rebuilt the entire portfolio between 01:00–04:00 — three times.",
+                "Replies to emails at 03:37 and signs off with “good morning”."
+            },
+            "Sleep is for the weak — or the extremely structured."
+        )
+    };
     }
-
-
-
 
 
 
     public QuizResult CalculateResult(SubmissionDto submission)
     {
         var catPersonas = GetCatPersonas();
-        var scores = new Dictionary<string, int>();
-
-        foreach (var persona in catPersonas)
+        var personaNames = new[]
         {
-            scores[persona.Name] = 0;
-        }
+        "The Purrplex",
+        "Paws N' Reflect",
+        "Boximus Prime",
+        "The Zoomolog",
+        "The Midnight Whisker"
+    };
+
+       
+        var mapping = new Dictionary<int, int[]>
+    {
+        { 1, new[] { 0, 1, 2, 3, 4 } },
+        { 2, new[] { 0, 1, 2, 3, 4 } },
+        { 3, new[] { 0, 1, 2, 3, 4 } },
+        { 4, new[] { 0, 1, 2, 3, 4 } },
+        { 5, new[] { 0, 1, 2, 3, 4 } },
+    };
+
+        
+        var scores = personaNames.ToDictionary(name => name, _ => 0);
+
+        if (submission?.Answers is not { Length: > 0 })
+            return new QuizResult(catPersonas.First(), scores); 
 
         foreach (var answer in submission.Answers)
         {
-            switch (answer.QuestionId)
-            {
-                case 1:
-                    switch (answer.OptionIndex)
-                    {
-                        case 0:
-                            scores["The Purrplex"]++;
-                            break;
-                        case 1:
-                            scores["Paws N' Reflect"]++;
-                            break;
-                        case 2:
-                            scores["Boximus Prime"]++;
-                            break;
-                        case 3:
-                            scores["The Zoomolog"]++;
-                            break;
-                        case 4:
-                            scores["The Midnight Whisker"]++;
-                            break;
-                    }
-                    break;
-                case 2: 
-                    switch (answer.OptionIndex)
-                    {
-                        case 0: scores["The Purrplex"]++; break;
-                        case 1: scores["Paws N' Reflect"]++; break;
-                        case 2: scores["Boximus Prime"]++; break;
-                        case 3: scores["The Zoomolog"]++; break;
-                        case 4: scores["The Midnight Whisker"]++; break;
-                    }
-                    break;
+            if (!mapping.TryGetValue(answer.QuestionId, out var personaIndexByOption))
+                continue; 
 
-                case 3: 
-                    switch (answer.OptionIndex)
-                    {
-                        case 0: scores["The Purrplex"]++; break;
-                        case 1: scores["Paws N' Reflect"]++; break;
-                        case 2: scores["Boximus Prime"]++; break;
-                        case 3: scores["The Zoomolog"]++; break;
-                        case 4: scores["The Midnight Whisker"]++; break;
-                    }
-                    break;
+            if (answer.OptionIndex < 0 || answer.OptionIndex >= personaIndexByOption.Length)
+                continue; 
 
-                case 4: 
-                    switch (answer.OptionIndex)
-                    {
-                        case 0: scores["The Purrplex"]++; break;
-                        case 1: scores["Paws N' Reflect"]++; break;
-                        case 2: scores["Boximus Prime"]++; break;
-                        case 3: scores["The Zoomolog"]++; break;
-                        case 4: scores["The Midnight Whisker"]++; break;
-                    }
-                    break;
+            var personaIdx = personaIndexByOption[answer.OptionIndex];
 
-                case 5: 
-                    switch (answer.OptionIndex)
-                    {
-                        case 0: scores["The Purrplex"]++; break;
-                        case 1: scores["Paws N' Reflect"]++; break;
-                        case 2: scores["Boximus Prime"]++; break;
-                        case 3: scores["The Zoomolog"]++; break;
-                        case 4: scores["The Midnight Whisker"]++; break;
-                    }
-                    break;
+            if (personaIdx < 0 || personaIdx >= personaNames.Length)
+                continue; 
 
-
-            }
+            var personaName = personaNames[personaIdx];
+            scores[personaName]++;
         }
-        var topPersona = scores.OrderByDescending(s => s.Value).First().Key;
-        return new QuizResult(catPersonas.First(p => p.Name == topPersona), scores);
 
+        
+        var max = scores.Values.DefaultIfEmpty(0).Max();
+        var winners = scores.Where(kv => kv.Value == max).Select(kv => kv.Key).ToList();
+
+        
+        var topName = winners.OrderBy(name => Array.IndexOf(personaNames, name)).First();
+
+        return new QuizResult(catPersonas.First(p => p.Name == topName), scores);
     }
 }

@@ -32,11 +32,15 @@ app.UseCors("AllowReactApp");
 
 
 // API endpoints
-app.MapGet("/", () => Results.Text("Catsona API är igång!"));
 app.MapGet("/api/quiz", (QuizService quizService) => Results.Json(quizService.GetQuiz()));
 app.MapPost("/api/quiz/submit", (SubmissionDto submission, QuizService quizService) => 
     Results.Json(quizService.CalculateResult(submission)));
 app.MapGet("/api/catpersonas", (QuizService quizService) => Results.Json(quizService.GetCatPersonas()));
+app.MapGet("/api/catpersonas/{id:int}", (int id, QuizService quizService) =>
+{
+    var persona = quizService.GetCatPersonas().FirstOrDefault(x => x.Id == id);
+    return persona is null ? Results.NotFound() : Results.Json(persona);
+});
 
 app.Run();
 
