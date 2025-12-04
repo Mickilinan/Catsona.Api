@@ -15,17 +15,22 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddDbContext<QuizDbContext>(options =>
-options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<QuizService>();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
+using (var scope = app.Services.CreateScope())
 {
-    app.MapOpenApi();
+    var context = scope.ServiceProvider.GetRequiredService<QuizDbContext>();
+    DatabaseSeeder.SeedDatabase(context);
 }
+
+    // Configure the HTTP request pipeline
+    if (app.Environment.IsDevelopment())
+    {
+        app.MapOpenApi();
+    }
 
 app.UseHttpsRedirection();
 app.UseCors("AllowReactApp");
